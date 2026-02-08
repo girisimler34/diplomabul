@@ -3,11 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Diploma Listing Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .diplomas {
+            margin-top: 20px;
+        }
+        .diploma {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
+    <h1>Diploma Listings</h1>
+    <div class="diplomas" id="diploma-list"></div>
 
+    <script>
+        const diplomas = [
+            { id: 1, name: "Bachelor in Computer Science", year: 2022 },
+            { id: 2, name: "Master in Data Science", year: 2023 },
+            { id: 3, name: "PhD in Artificial Intelligence", year: 2025 }
+        ];
+
+        const diplomaList = document.getElementById('diploma-list');
+
+        diplomas.forEach(diploma => {
+            const div = document.createElement('div');
+            div.className = 'diploma';
+            div.innerHTML = `<strong>${diploma.name}</strong> - Year: ${diploma.year}`;
+            diplomaList.appendChild(div);
+        });
+    </script>
 </body>
 </html>
