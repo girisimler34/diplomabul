@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma/Belge Listeleme Uygulaması</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to responsive CSS -->
+</head>
+<body>
+    <header>
+        <h1>Diploma/Belge Listeleme Uygulaması</h1>
+        <input type="text" id="search" placeholder="Ara..." />
+    </header>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Sıra No</th>
+                <th>Belge Adı</th>
+                <th>Açıklama</th>
+                <th>İletişim/T.me Linki</th>
+                <th>Düzenle/Sil</th>
+                <th>Güncellik</th>
+            </tr>
+        </thead>
+        <tbody id="listing">
+            <!-- Dynamic content to be added here -->
+        </tbody>
+    </table>
+
+    <div>
+        <h2>Yeni Belge Ekle</h2>
+        <form id="addDocumentForm">
+            <input type="text" id="documentName" placeholder="Belge Adı" required />
+            <input type="text" id="documentDescription" placeholder="Açıklama" required />
+            <input type="text" id="contactLink" placeholder="İletişim/T.me Linki" required />
+            <input type="password" id="postPassword" placeholder="Şifre (Anonymous)" required />
+            <button type="submit">Ekle</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to JS for functionality -->
+</body>
+</html>
